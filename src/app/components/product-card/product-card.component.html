@@ -1,0 +1,22 @@
+<mdb-card>
+  <!--Card image-->
+  <mdb-card-img [src]="product.img" [alt]="product.name"></mdb-card-img>
+  <!--Card content-->
+  <mdb-card-body>
+
+    <!--Title-->
+    <mdb-card-title>
+      <h4>{{ product.name }}</h4>
+    </mdb-card-title>
+
+    <!--Text-->
+    <mdb-card-text>
+      {{ product.description }}
+    </mdb-card-text>
+
+    <mdb-card-footer class="d-flex justify-content-between align-items-center">
+      <h5>{{ product.price }} $</h5>
+      <a href="#" mdbBtn color="primary" mdbWavesEffect>View</a>
+    </mdb-card-footer>
+  </mdb-card-body>
+</mdb-card>

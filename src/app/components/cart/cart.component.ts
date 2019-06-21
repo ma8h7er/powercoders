@@ -28,4 +28,8 @@ export class CartComponent implements OnInit {
 
     return total;
   }
+
+  onDeleteProduct(id: number) {
+    this.productService.deleteProduct(id);
+  }
 }

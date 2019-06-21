@@ -6,6 +6,9 @@
     </div>
     <div>
       {{ product.count }} X {{ product.price }}
+      <a (click)="onDeleteProduct(product.id)" class="pl-2">
+        <i class="fa fa-times-circle red-text"></i>
+      </a>
     </div>
   </div>
   <div class="list-group-item active white-text d-flex justify-content-between">

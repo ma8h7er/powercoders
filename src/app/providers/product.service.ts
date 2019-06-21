@@ -65,4 +65,12 @@ export class ProductService {
     let cart = JSON.parse(localStorage.getItem('cart'));
     this.cart.next(cart);
   }
+
+  deleteProduct(id: number) {
+    let cart = this.cart.getValue();
+    let index = cart.findIndex(p => p.id == id);
+    cart.splice(index, 1);
+    this.cart.next(cart);
+    this.registerCart(cart);
+  }
 }

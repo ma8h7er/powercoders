@@ -8,6 +8,10 @@ import {MenuService} from './providers/menu.service';
 import { CartComponent } from './components/cart/cart.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
+import { HomeComponent } from './components/home/home.component';
+import { PageComponent } from './components/page/page.component';
+import {AppRoutingModule} from './app-routing.module';
+import { ProductViewComponent } from './components/product-view/product-view.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +20,15 @@ import { ProductCardComponent } from './components/product-card/product-card.com
     FooterComponent,
     CartComponent,
     ProductListComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    HomeComponent,
+    PageComponent,
+    ProductViewComponent
   ],
   imports: [
     BrowserModule,
-    MDBBootstrapModule.forRoot()
+    MDBBootstrapModule.forRoot(),
+    AppRoutingModule
   ],
   providers: [
     MenuService

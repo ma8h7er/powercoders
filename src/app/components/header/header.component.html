@@ -10,7 +10,9 @@
     <!-- Links -->
     <ul class="navbar-nav mr-auto">
       <li *ngFor="let item of menu; let i = index" class="nav-item {{ getActiveClass(i) }}">
-        <a class="nav-link">{{ item.title }} {{ item.id }}</a>
+        <a class="nav-link" [routerLink]="item.url">
+          {{ item.title }} {{ item.id }}
+        </a>
       </li>
     </ul>
     <!-- Links -->

@@ -6,11 +6,13 @@ export class MenuService {
   private menu: MenuInterface[] = [
     {
       id: 1,
-      title: 'Home'
+      title: 'Home',
+      url: ''
     },
     {
       id: 2,
-      title: 'Abount'
+      title: 'Abount',
+      url: 'about'
     },
     {
       id: 3,

@@ -1,3 +1,15 @@
-<p>
-  cart works!
-</p>
+<div class="list-group">
+  <div *ngFor="let product of products" class="list-group-item d-flex justify-content-between">
+    <div>
+      <img [src]="product.img" width="40" class="pr-2">
+      {{ product.name }}
+    </div>
+    <div>
+      {{ product.count }} X {{ product.price }}
+    </div>
+  </div>
+  <div class="list-group-item active white-text d-flex justify-content-between">
+    <div>Total</div>
+    <div>{{ calcTotal() }}</div>
+  </div>
+</div>

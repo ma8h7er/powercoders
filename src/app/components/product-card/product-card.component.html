@@ -6,7 +6,9 @@
 
     <!--Title-->
     <mdb-card-title>
-      <h4>{{ product.name }}</h4>
+      <h4>
+        <a [routerLink]="['/product', product.id]">{{ product.name }}</a>
+      </h4>
     </mdb-card-title>
 
     <!--Text-->
@@ -16,7 +18,7 @@
 
     <mdb-card-footer class="d-flex justify-content-between align-items-center">
       <h5>{{ product.price }} $</h5>
-      <a href="#" mdbBtn color="primary" mdbWavesEffect>View</a>
+      <button type="button" mdbBtn color="primary" mdbWavesEffect (click)="onBuyProduct()">Buy</button>
     </mdb-card-footer>
   </mdb-card-body>
 </mdb-card>
